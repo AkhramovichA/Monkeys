@@ -13,9 +13,9 @@
 		844A7ED62682421D001C732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A7ED42682421D001C732A /* Main.storyboard */; };
 		844A7ED82682421E001C732A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844A7ED72682421E001C732A /* Assets.xcassets */; };
 		844A7EDB2682421E001C732A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A7ED92682421E001C732A /* LaunchScreen.storyboard */; };
-		844A7EE7268244F6001C732A /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A7EE6268244F6001C732A /* Parser.swift */; };
 		844A7EEA2682453C001C732A /* Monkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A7EE92682453C001C732A /* Monkeys.swift */; };
-		844A7EEE268245BF001C732A /* JSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 844A7EED268245BF001C732A /* JSON.json */; };
+		F17918D2269DF75C00A23566 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17918D1269DF75C00A23566 /* Parser.swift */; };
+		F17918D4269DF7DB00A23566 /* JSON.json in Resources */ = {isa = PBXBuildFile; fileRef = F17918D3269DF7DB00A23566 /* JSON.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +27,9 @@
 		844A7ED72682421E001C732A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844A7EDA2682421E001C732A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844A7EDC2682421E001C732A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		844A7EE6268244F6001C732A /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = ../../../Downloads/Parser.swift; sourceTree = "<group>"; };
 		844A7EE92682453C001C732A /* Monkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monkeys.swift; sourceTree = "<group>"; };
-		844A7EED268245BF001C732A /* JSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = JSON.json; path = ../../Downloads/JSON.json; sourceTree = "<group>"; };
+		F17918D1269DF75C00A23566 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		F17918D3269DF7DB00A23566 /* JSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = JSON.json; path = Monkeys/JSON.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +46,7 @@
 		844A7EC22682421D001C732A = {
 			isa = PBXGroup;
 			children = (
-				844A7EED268245BF001C732A /* JSON.json */,
+				F17918D3269DF7DB00A23566 /* JSON.json */,
 				844A7ECD2682421D001C732A /* Monkeys */,
 				844A7ECC2682421D001C732A /* Products */,
 			);
@@ -63,7 +63,7 @@
 		844A7ECD2682421D001C732A /* Monkeys */ = {
 			isa = PBXGroup;
 			children = (
-				844A7EE6268244F6001C732A /* Parser.swift */,
+				F17918D1269DF75C00A23566 /* Parser.swift */,
 				844A7EE92682453C001C732A /* Monkeys.swift */,
 				844A7ECE2682421D001C732A /* AppDelegate.swift */,
 				844A7ED02682421D001C732A /* SceneDelegate.swift */,
@@ -136,7 +136,7 @@
 				844A7EDB2682421E001C732A /* LaunchScreen.storyboard in Resources */,
 				844A7ED82682421E001C732A /* Assets.xcassets in Resources */,
 				844A7ED62682421D001C732A /* Main.storyboard in Resources */,
-				844A7EEE268245BF001C732A /* JSON.json in Resources */,
+				F17918D4269DF7DB00A23566 /* JSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,9 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				844A7EE7268244F6001C732A /* Parser.swift in Sources */,
 				844A7ED32682421D001C732A /* ViewController.swift in Sources */,
 				844A7ECF2682421D001C732A /* AppDelegate.swift in Sources */,
+				F17918D2269DF75C00A23566 /* Parser.swift in Sources */,
 				844A7EEA2682453C001C732A /* Monkeys.swift in Sources */,
 				844A7ED12682421D001C732A /* SceneDelegate.swift in Sources */,
 			);
