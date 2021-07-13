@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var selectedMonkeyTextField: UITextField!
+    @IBOutlet weak var tableView: UITableView!
     
     var monkeysList: [String] = []
     let picker = UIPickerView()
@@ -33,6 +34,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         monkeysList = Parser.parseNamesFromJSON()?.list ?? []
+        tableView.delegate = self
+        tableView.dataSource = self
         picker.delegate = self
         picker.dataSource = self
         selectedMonkeyTextField.inputView = picker
@@ -77,4 +80,18 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
     }
 
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return monkeysList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        cell?.textLabel?.text = monkeysList[indexPath.row]
+        return cell ?? UITableViewCell()
+    }
+    
+    
 }
