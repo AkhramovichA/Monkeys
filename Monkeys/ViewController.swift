@@ -11,7 +11,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectedMonkeyTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    var monkeysList: [String] = []
+    var monkeysList: [(String,String)] = ["гусь" , "гусь"]
     let picker = UIPickerView()
     
     func toolbar() -> UIToolbar {
@@ -27,13 +27,12 @@ class ViewController: UIViewController {
     }
     
     @objc func selectItem() {
-        selectedMonkeyTextField.text = "\(picker.selectedRow(inComponent: 0) + 1) " + monkeysList[picker.selectedRow(inComponent: 1)]
+        selectedMonkeyTextField.text = "\(picker.selectedRow(inComponent: 0) + 1) " + monkeysList[picker.selectedRow(inComponent: 1)].0
         selectedMonkeyTextField.resignFirstResponder() // Скрыть текст филд
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        monkeysList = Parser.parseNamesFromJSON()?.list ?? []
         tableView.delegate = self
         tableView.dataSource = self
         picker.delegate = self
@@ -74,7 +73,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 0:
             return "\(row + 1)"
         case 1:
-            return monkeysList[row]
+            return monkeysList[row].0
         default:
             return ""
         }
