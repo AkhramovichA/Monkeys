@@ -11,7 +11,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var selectedMonkeyTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
-    var monkeysList: [String] = []
+    var monkeysList: [(String, String)] = [
+        ("Мартышки", "Африка"),
+        ("Горилла", "Америка"),
+        ("Бабуин", "Азия"),
+        ("Шимпанзе", "Америка"),
+        ("Капуцин", "Америка"),
+        ("Король Джулиан", "Африка"),
+        ("Моррис", "Азия"),
+        ("Морт", "Африка"),
+        ("Орангутанг", "Америка")
+    ]
     let picker = UIPickerView()
     
     func toolbar() -> UIToolbar {
@@ -27,13 +37,12 @@ class ViewController: UIViewController {
     }
     
     @objc func selectItem() {
-        selectedMonkeyTextField.text = "\(picker.selectedRow(inComponent: 0) + 1) " + monkeysList[picker.selectedRow(inComponent: 1)]
+        selectedMonkeyTextField.text = "\(picker.selectedRow(inComponent: 0) + 1) " + monkeysList[picker.selectedRow(inComponent: 1)].0
         selectedMonkeyTextField.resignFirstResponder() // Скрыть текст филд
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        monkeysList = Parser.parseNamesFromJSON()?.list ?? []
         tableView.delegate = self
         tableView.dataSource = self
         picker.delegate = self
@@ -74,7 +83,7 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         case 0:
             return "\(row + 1)"
         case 1:
-            return monkeysList[row]
+            return monkeysList[row].0
         default:
             return ""
         }
@@ -88,8 +97,9 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
-        cell?.textLabel?.text = monkeysList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as? MonkeyTableViewCell
+        cell?.monkeyNameLabel.text = monkeysList[indexPath.row].0
+        cell?.monkeyArealLabel.text = monkeysList[indexPath.row].1
         return cell ?? UITableViewCell()
     }
     

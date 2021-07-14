@@ -13,9 +13,7 @@
 		844A7ED62682421D001C732A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A7ED42682421D001C732A /* Main.storyboard */; };
 		844A7ED82682421E001C732A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844A7ED72682421E001C732A /* Assets.xcassets */; };
 		844A7EDB2682421E001C732A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844A7ED92682421E001C732A /* LaunchScreen.storyboard */; };
-		844A7EEA2682453C001C732A /* Monkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844A7EE92682453C001C732A /* Monkeys.swift */; };
-		F17918D2269DF75C00A23566 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17918D1269DF75C00A23566 /* Parser.swift */; };
-		F17918D4269DF7DB00A23566 /* JSON.json in Resources */ = {isa = PBXBuildFile; fileRef = F17918D3269DF7DB00A23566 /* JSON.json */; };
+		F12828A2269F065100409ABA /* MonkeyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12828A1269F065100409ABA /* MonkeyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +25,7 @@
 		844A7ED72682421E001C732A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		844A7EDA2682421E001C732A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		844A7EDC2682421E001C732A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		844A7EE92682453C001C732A /* Monkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monkeys.swift; sourceTree = "<group>"; };
-		F17918D1269DF75C00A23566 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
-		F17918D3269DF7DB00A23566 /* JSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = JSON.json; path = Monkeys/JSON.json; sourceTree = "<group>"; };
+		F12828A1269F065100409ABA /* MonkeyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +42,6 @@
 		844A7EC22682421D001C732A = {
 			isa = PBXGroup;
 			children = (
-				F17918D3269DF7DB00A23566 /* JSON.json */,
 				844A7ECD2682421D001C732A /* Monkeys */,
 				844A7ECC2682421D001C732A /* Products */,
 			);
@@ -63,12 +58,11 @@
 		844A7ECD2682421D001C732A /* Monkeys */ = {
 			isa = PBXGroup;
 			children = (
-				F17918D1269DF75C00A23566 /* Parser.swift */,
-				844A7EE92682453C001C732A /* Monkeys.swift */,
 				844A7ECE2682421D001C732A /* AppDelegate.swift */,
 				844A7ED02682421D001C732A /* SceneDelegate.swift */,
 				844A7ED22682421D001C732A /* ViewController.swift */,
 				844A7ED42682421D001C732A /* Main.storyboard */,
+				F12828A1269F065100409ABA /* MonkeyTableViewCell.swift */,
 				844A7ED72682421E001C732A /* Assets.xcassets */,
 				844A7ED92682421E001C732A /* LaunchScreen.storyboard */,
 				844A7EDC2682421E001C732A /* Info.plist */,
@@ -136,7 +130,6 @@
 				844A7EDB2682421E001C732A /* LaunchScreen.storyboard in Resources */,
 				844A7ED82682421E001C732A /* Assets.xcassets in Resources */,
 				844A7ED62682421D001C732A /* Main.storyboard in Resources */,
-				F17918D4269DF7DB00A23566 /* JSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +142,7 @@
 			files = (
 				844A7ED32682421D001C732A /* ViewController.swift in Sources */,
 				844A7ECF2682421D001C732A /* AppDelegate.swift in Sources */,
-				F17918D2269DF75C00A23566 /* Parser.swift in Sources */,
-				844A7EEA2682453C001C732A /* Monkeys.swift in Sources */,
+				F12828A2269F065100409ABA /* MonkeyTableViewCell.swift in Sources */,
 				844A7ED12682421D001C732A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
